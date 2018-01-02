@@ -4,17 +4,49 @@
 @import 'libs/skel';
 
 /*
-	Prologue by Pixelarity
+	Phantom by Pixelarity
 	pixelarity.com | hello@pixelarity.com
 	License: pixelarity.com/license
 */
 
-/* Button */
+/* Tiles */
 
-	input[type="button"],
-	input[type="submit"],
-	input[type="reset"],
-	button,
-	.button {
-		background-image: url('images/ie/grad0-15.svg');
+	.tiles {
+		&:after {
+			content: '';
+			display: block;
+			clear: both;
+		}
+
+		article {
+			float: left;
+
+			> a {
+				padding-top: 50%;
+				margin-top: -1.75em;
+			}
+
+			body:not(.is-touch) & {
+				&:hover {
+					> .image {
+						@include vendor('transform', 'none');
+					}
+				}
+			}
+		}
+	}
+
+/* Footer */
+
+	#footer {
+		> .inner {
+			section {
+				float: left;
+			}
+
+			.copyright {
+				clear: both;
+				padding-top: (_size(element-margin) * 2);
+			}
+		}
 	}
