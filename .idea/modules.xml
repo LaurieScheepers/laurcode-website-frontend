@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/laurcode-website.iml" filepath="$PROJECT_DIR$/.idea/laurcode-website.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/laurcode-website-frontend.iml" filepath="$PROJECT_DIR$/.idea/laurcode-website-frontend.iml" />
     </modules>
   </component>
 </project>
