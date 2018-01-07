@@ -35,7 +35,7 @@ button.special,
 
 /* Tiles */
 
-.tiles article > .image:before, .tiles article > .image:after {
+.tiles article > .image:before {
     display: none;
 }
 
