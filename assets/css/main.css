@@ -52,11 +52,6 @@ figcaption {
     font-size: 0.8em;
 }
 
-img, figcaption {
-    display: table-row;
-    font-size: 0.8em;
-}
-
 /* Box Model */
 
 *, *:before, *:after {
