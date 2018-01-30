@@ -292,6 +292,9 @@ AddDefaultCharset utf-8
 #
 #     https://httpd.apache.org/docs/current/mod/mod_rewrite.html#RewriteEngine
 #
+#     Redirect from the `http://` to the `https://` version of the URL.
+#     https://wiki.apache.org/httpd/RewriteHTTPToHTTPS
+#
 # (2) Enable the `FollowSymLinks` option if it isn't already.
 #
 #     https://httpd.apache.org/docs/current/mod/core.html#options
@@ -321,6 +324,8 @@ AddDefaultCharset utf-8
 
     # (1)
     RewriteEngine On
+    RewriteCond %{HTTPS} off
+    RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
     # (2)
     Options +FollowSymlinks
@@ -341,19 +346,6 @@ AddDefaultCharset utf-8
     RewriteRule ^ - [env=proto:http]
 
 </IfModule>
-
-# ----------------------------------------------------------------------
-# | Forcing `https://`                                                 |
-# ----------------------------------------------------------------------
-
-# Redirect from the `http://` to the `https://` version of the URL.
-# https://wiki.apache.org/httpd/RewriteHTTPToHTTPS
-
-# <IfModule mod_rewrite.c>
-#    RewriteEngine On
-#    RewriteCond %{HTTPS} !=on
-#    RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
-# </IfModule>
 
 # ----------------------------------------------------------------------
 # | Suppressing / Forcing the `www.` at the beginning of URLs          |
