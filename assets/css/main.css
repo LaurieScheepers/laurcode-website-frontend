@@ -2702,6 +2702,17 @@ input[type="radio"] + label:before {
 
 /* Image */
 
+/* images with a data-src attribute are hidden by default */
+img[data-src] {
+    opacity: 0;
+}
+
+/* Fade in effect */
+img {
+    opacity: 1;
+    transition: opacity 0.3s;
+}
+
 .image {
     border-radius: 4px;
     border: 0;
