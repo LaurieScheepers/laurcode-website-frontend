@@ -2700,8 +2700,6 @@ input[type="radio"] + label:before {
     padding: 0;
 }
 
-/* Image */
-
 /* images with a data-src attribute are hidden by default */
 img[data-src] {
     opacity: 0;
@@ -2712,6 +2710,8 @@ img {
     opacity: 1;
     transition: opacity 0.3s;
 }
+
+/* Image */
 
 .image {
     border-radius: 4px;
