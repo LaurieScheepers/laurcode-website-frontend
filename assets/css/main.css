@@ -2700,17 +2700,6 @@ input[type="radio"] + label:before {
     padding: 0;
 }
 
-/* images with a data-src attribute are hidden by default */
-img[data-src] {
-    opacity: 0;
-}
-
-/* Fade in effect */
-img {
-    opacity: 1;
-    transition: opacity 0.3s;
-}
-
 /* Image */
 
 .image {
