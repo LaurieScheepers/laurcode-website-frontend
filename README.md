@@ -1,2 +1,2 @@
 # laurcode-website-frontend
-The frontend code of my personal website, www.laurcode.com
+The frontend code of my personal website, [laurcode.com](https://laurcode.com)
