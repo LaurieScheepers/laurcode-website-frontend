@@ -3708,3 +3708,41 @@ body.is-menu-visible #menu .close {
     }
 
 }
+
+.mxit-carousel {
+    height: 240px;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    transform: translate3d(0, 0, 0);
+}
+
+/*noinspection CssOverwrittenProperties*/
+.mxit-carousel > div {
+    height: 240px;
+    width: 3600px;
+    background: url(https://laurcode.com/images/mxit_carousel.png);
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    transform: translate3d(0, 0, 0);
+}
+
+.mxit-carousel .mover {
+    animation: moveSlideshow 17s alternate-reverse infinite;
+}
+
+.mxit-carousel:hover .mover {
+    -webkit-animation-play-state: paused;
+    -moz-animation-play-state: paused;
+    -o-animation-play-state: paused;
+    animation-play-state: paused;
+}
+
+@keyframes moveSlideshow {
+    100% {
+        transform: translateX(-66.6666%);
+    }
+}
