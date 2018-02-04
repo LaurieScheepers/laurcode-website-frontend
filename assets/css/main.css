@@ -42,16 +42,6 @@ body {
     -webkit-text-size-adjust: none;
 }
 
-figure {
-    display: table;
-    width: 1px;
-}
-
-figcaption {
-    text-align: center;
-    font-size: 0.8em;
-}
-
 /* Box Model */
 
 *, *:before, *:after {
@@ -3731,7 +3721,7 @@ body.is-menu-visible #menu .close {
 }
 
 .mxit-carousel .mover {
-    animation: moveSlideshow 17s alternate-reverse infinite;
+    animation: moveCarousel 17s alternate-reverse infinite;
 }
 
 .mxit-carousel:hover .mover {
@@ -3741,7 +3731,39 @@ body.is-menu-visible #menu .close {
     animation-play-state: paused;
 }
 
-@keyframes moveSlideshow {
+.reach-carousel {
+    height: 240px;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    transform: translate3d(0, 0, 0);
+}
+
+/*noinspection CssOverwrittenProperties*/
+.reach-carousel > div {
+    height: 240px;
+    width: 3600px;
+    background: url(https://laurcode.com/images/reach_carousel.png);
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    transform: translate3d(0, 0, 0);
+}
+
+.reach-carousel .mover {
+    animation: moveCarousel 17s alternate-reverse infinite;
+}
+
+.reach-carousel:hover .mover {
+    -webkit-animation-play-state: paused;
+    -moz-animation-play-state: paused;
+    -o-animation-play-state: paused;
+    animation-play-state: paused;
+}
+
+@keyframes moveCarousel {
     100% {
         transform: translateX(-66.6666%);
     }
