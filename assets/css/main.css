@@ -3768,3 +3768,35 @@ body.is-menu-visible #menu .close {
         transform: translateX(-66.6666%);
     }
 }
+
+/* Three image containers (used on the Nomanini page) */
+
+/* FinTech award: */
+.nom_image_fintech {
+    float: left;
+    width: 33.33%;
+    padding: 5px;
+}
+
+/* MIT award */
+.nom_image_mit {
+    float: left;
+    width: 33.33%;
+    padding: 5px;
+    margin-top: 60px;
+}
+
+/* WSA award */
+.nom_image_wsa {
+    float: left;
+    width: 33.33%;
+    padding: 5px;
+    margin-top: 25px;
+}
+
+/* Clear floats after image containers */
+.nomanini_awards_section::after {
+    content: "";
+    clear: both;
+    display: table;
+}
