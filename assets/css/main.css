@@ -3774,29 +3774,42 @@ body.is-menu-visible #menu .close {
 /* FinTech award: */
 .nom_image_fintech {
     float: left;
-    width: 33.33%;
+    width: auto;
+    height: auto;
+    !important;
     padding: 5px;
+    flex-grow: 1;
 }
 
 /* MIT award */
 .nom_image_mit {
     float: left;
-    width: 33.33%;
+    width: auto;
+    height: auto;
+    !important;
     padding: 5px;
     margin-top: 60px;
+    margin-bottom: 60px;
+    flex-grow: 1;
 }
 
 /* WSA award */
 .nom_image_wsa {
     float: left;
-    width: 33.33%;
+    width: auto;
+    height: auto;
+    !important;
     padding: 5px;
-    margin-top: 25px;
+    flex-grow: 1;
+}
+
+.nomanini_awards_section {
+    display: flex;
+    flex-wrap: wrap;
 }
 
 /* Clear floats after image containers */
 .nomanini_awards_section::after {
     content: "";
     clear: both;
-    display: table;
 }
