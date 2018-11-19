@@ -169,6 +169,12 @@
             }
         }
 
+        &.style9 {
+            > .image:before {
+                background-color: _palette(accent9);
+            }
+        }
+
         body:not(.is-touch) & {
             &:hover {
                 > .image {
